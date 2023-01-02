@@ -19,7 +19,7 @@ Template para a criação da base do Design System.
 [Projeto da Semana 5](https://www.figma.com/community/file/1161274296921389678)
 
 ## Preview
-Para ver o **Projeto da Semana 5**, clique aqui: Projeto da Semana 5 - Design System](https://georgaugusto.github.io/05-ignite-design-system/)</br>
+Para ver o **Projeto da Semana 5**, clique aqui: [Projeto da Semana 5 - Design System](https://georgaugusto.github.io/05-ignite-design-system/)</br>
 
 ## Tecnologias
 
