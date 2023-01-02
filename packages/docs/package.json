@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@course-ignite-ui/docs",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -24,10 +24,10 @@
     "vite": "^3.1.4"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@course-ignite-ui/eslint-config": "*",
+    "@course-ignite-ui/react": "*",
+    "@course-ignite-ui/tokens": "*",
+    "@course-ignite-ui/ts-config": "*",
     "@storybook/addon-a11y": "^6.5.15",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",
