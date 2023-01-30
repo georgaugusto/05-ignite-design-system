@@ -9,10 +9,19 @@ export default {
     size: 'md',
   },
   argTypes: {
+    children: {
+      name: 'children',
+      description: 'Children (inner test)',
+      control: {
+        type: 'text',
+      },
+    },
     size: {
+      name: 'size',
+      description: 'Size',
       options: ['sm', 'md', 'lg', '2xl', '4xl', '5xl', '6xl'],
       control: {
-        type: 'inline-radio',
+        type: 'select',
       },
     },
   },
@@ -29,7 +38,7 @@ export const CustomTag: StoryObj<HeadingProps> = {
     docs: {
       description: {
         story:
-          'Por padrão o heading sempre será um `h2`, mas podemos alterar isso com a propriedade `as`.',
+          'By default, the header will always be an `h2`, but we can change this with the `as` property.',
       },
     },
   },

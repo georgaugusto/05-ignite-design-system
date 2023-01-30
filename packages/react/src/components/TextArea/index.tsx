@@ -1,35 +1,36 @@
 import { ComponentProps } from 'react'
-import { styled } from '../../styles'
+import { Text } from '../Text'
+import { TextAreaContainer, TextAreaInput, ErrorMessage } from './styles'
 
-export const TextArea = styled('textarea', {
-  backgroundColor: '$gray900',
-  padding: '$3 $4',
-  borderRadius: '$sm',
-  boxSizing: 'border-box',
-  border: '2px solid $gray900',
+export interface TextAreaProps extends ComponentProps<typeof TextAreaInput> {
+  label: string
+  variant: 'primary'
+  isErrored?: any
+  errorMessage?: string
+}
 
-  fontFamily: '$default',
-  fontSize: '$sm',
-  color: '$white',
-  fontWeight: '$regular',
-  resize: 'vertical',
-  minHeight: 80,
+export function TextArea({
+  label,
+  variant,
+  isErrored,
+  errorMessage,
+  ...props
+}: TextAreaProps) {
+  return (
+    <TextAreaContainer>
+      {label && (
+        <Text size="sm" as="label">
+          {label}
+        </Text>
+      )}
 
-  '&:focus': {
-    outline: 0,
-    borderColor: '$ignite300',
-  },
+      <TextAreaInput isErrored={!!isErrored} {...props} />
 
-  '&:disabled': {
-    opacity: 0.5,
-    cursor: 'not-allowed',
-  },
-
-  '&:placeholder': {
-    color: '$gray400',
-  },
-})
-
-export interface TextAreaProps extends ComponentProps<typeof TextArea> {}
+      <ErrorMessage isErrored={!props.disabled && !!isErrored}>
+        {!!isErrored && <span>{errorMessage}</span>}
+      </ErrorMessage>
+    </TextAreaContainer>
+  )
+}
 
 TextArea.displayName = 'TextArea'

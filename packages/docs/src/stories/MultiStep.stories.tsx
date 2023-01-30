@@ -8,6 +8,22 @@ export default {
     size: 4,
     currentStep: 1,
   },
+  argTypes: {
+    size: {
+      name: 'size',
+      description: '`number` of steps',
+      control: {
+        type: 'number',
+      },
+    },
+    currentStep: {
+      name: 'currentStep',
+      description: 'current step `number`',
+      control: {
+        type: 'number',
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <Box

@@ -1,58 +1,118 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { styled, keyframes } from '../../styles'
 
-export const CheckboxContainer = styled(Checkbox.Root, {
+const fadeIn = keyframes({
+  from: { opacity: 0 },
+  to: { opacity: 1 },
+})
+
+const fadeOut = keyframes({
+  from: { opacity: 1 },
+  to: { opacity: 0 },
+})
+
+export const CheckboxContainer = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+
+  gap: '$4',
+
+  variants: {
+    isDisabled: {
+      true: {
+        label: {
+          color: '$contentStateDisabled',
+        },
+      },
+    },
+  },
+
+  defaultVariants: {
+    isDisabled: false,
+  },
+})
+
+export const CheckboxRoot = styled(Checkbox.Root, {
   all: 'unset',
+
   width: '$6',
   height: '$6',
-  backgroundColor: '$gray900',
-  borderRadius: '$xs',
-  lineHeight: 0,
-  cursor: 'pointer',
-  overflow: 'hidden',
-  boxSizing: 'border-box',
+
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  border: '2px solid $gray900',
+  overflow: 'hidden',
+  boxSizing: 'border-box',
+  lineHeight: 0,
+
+  cursor: 'pointer',
+
+  backgroundColor: 'contentPrimary',
+  borderRadius: '$xs',
+  border: '2px solid $contentTertiary',
 
   '&[data-state="checked"]': {
-    backgroundColor: '$ignite300',
+    backgroundColor: '$contentPrimary',
+    border: '2px solid $contentPrimary',
+
+    animation: `background ${fadeIn} 200ms ease-out`,
   },
 
   '&:focus': {
-    border: '2px solid $ignite300',
+    border: '2px solid $contentPrimary',
   },
-})
 
-const slideIn = keyframes({
-  from: {
-    transform: 'translateY(-100%)',
+  '&[data-state="unchecked"]': {
+    animation: `background ${fadeOut} 200ms ease-out`,
   },
-  to: {
-    transform: 'translateY(0)',
-  },
-})
 
-const slideOut = keyframes({
-  from: {
-    transform: 'translateY(0)',
+  variants: {
+    isDisabled: {
+      true: {
+        '&[data-state="checked"]': {
+          backgroundColor: '$contentStateDisabled',
+          border: '2px solid $contentStateDisabled',
+
+          cursor: 'not-allowed',
+        },
+
+        '&[data-state="unchecked"]': {
+          backgroundColor: 'contentPrimary',
+          border: '2px solid $contentStateDisabled',
+
+          cursor: 'not-allowed',
+        },
+      },
+    },
   },
-  to: {
-    transform: 'translateY(-100%)',
+
+  defaultVariants: {
+    isDisabled: false,
   },
 })
 
 export const CheckboxIndicator = styled(Checkbox.Indicator, {
-  color: '$white',
+  color: '$contentInversePrimary',
   width: '$4',
   height: '$4',
 
   '&[data-state="checked"]': {
-    animation: `${slideIn} 200ms ease-out`,
+    animation: `${fadeIn} 200ms ease-out`,
   },
 
   '&[data-state="unchecked"]': {
-    animation: `${slideOut} 200ms ease-out`,
+    animation: `${fadeOut} 200ms ease-out`,
+  },
+
+  variants: {
+    isDisabled: {
+      true: {
+        color: '$contentPrimary',
+      },
+    },
+  },
+
+  defaultVariants: {
+    isDisabled: false,
   },
 })
