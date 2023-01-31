@@ -14,9 +14,10 @@
 Nesse semana construimos um Design System, entendendemos como documentar os componentes do React e descobrimos diversas ferramentas que nos estão ajudando desde a implementação do Design System até sua publicação, como o Storybook, o changesets e muito mais.
 
 ### Template
-Template para a criação da base do Design System.
+Para a criação da base do design system desta semana utilizei como base dois projetos, o projeto do curso do ignite e o design base da Uber.
 
-[Projeto da Semana 5](https://www.figma.com/community/file/1161274296921389678)
+Uber's Base design system - [Base Gallery](https://www.figma.com/community/file/805195278314519508)
+Projeto da próxima semana - [Ignite Call](https://www.figma.com/community/file/1161274296921389678)
 
 ## Preview
 Para ver o **Design System**, feito essa semana, clique aqui: [Projeto da Semana 5 - Design System](https://georgaugusto.github.io/05-ignite-design-system/)</br>
