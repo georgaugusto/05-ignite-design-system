@@ -1,5 +1,11 @@
 # @course-ignite-ui/react
 
+## 1.1.2
+
+### Patch Changes
+
+- little adjustments
+
 ## 1.1.1
 
 ### Patch Changes
