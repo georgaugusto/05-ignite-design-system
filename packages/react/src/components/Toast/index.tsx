@@ -10,7 +10,7 @@ import {
 } from './styles'
 
 export interface ToastProps extends ComponentProps<typeof ToastContainer> {
-  icon: boolean
+  icon?: boolean
   description: string
 }
 

@@ -1,5 +1,11 @@
 # @course-ignite-ui/react
 
+## 1.1.3
+
+### Patch Changes
+
+- size variants in Text Input, and changing to optional some component variables
+
 ## 1.1.2
 
 ### Patch Changes

@@ -13,6 +13,7 @@ export default {
   },
   args: {
     label: 'Label name',
+    size: 'md',
     disabled: false,
     variant: 'primary',
     isErrored: false,
@@ -33,6 +34,14 @@ export default {
       description: '`string`',
       control: {
         type: 'text',
+      },
+    },
+    size: {
+      name: 'size',
+      description: 'Size',
+      options: ['sm', 'md', 'lg'],
+      control: {
+        type: 'select',
       },
     },
     disabled: {

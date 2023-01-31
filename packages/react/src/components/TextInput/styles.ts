@@ -11,7 +11,6 @@ export const InputContainer = styled('div', {
   boxSizing: 'border-box',
   alignItems: 'baseline',
 
-  padding: '$3 $4',
   borderRadius: '$sm',
 
   variants: {
@@ -31,6 +30,21 @@ export const InputContainer = styled('div', {
         },
       },
     },
+
+    size: {
+      sm: {
+        padding: '0.375rem $4',
+      },
+
+      md: {
+        padding: '0.625rem $4',
+      },
+
+      lg: {
+        padding: '$3 $4',
+      },
+    },
+
     isErrored: {
       true: {
         backgroundColor: '$backgroundLightNegative',
@@ -43,6 +57,7 @@ export const InputContainer = styled('div', {
 
   defaultVariants: {
     variant: 'primary',
+    size: 'md',
     isErrored: false,
   },
 })
@@ -63,7 +78,6 @@ export const Input = styled('input', {
   border: 0,
 
   fontFamily: '$default',
-  fontSize: '$sm',
   fontWeight: 'regular',
 
   '&:focus': {
@@ -81,6 +95,38 @@ export const Input = styled('input', {
 
   '&:placeholder': {
     color: '$contentTertiary',
+  },
+
+  variants: {
+    size: {
+      sm: {
+        height: '$5',
+        fontSize: '0.875rem',
+        lineHeight: '$5',
+
+        padding: 0,
+      },
+
+      md: {
+        height: '$6',
+        fontSize: '$4',
+        lineHeight: '$6',
+
+        padding: 0,
+      },
+
+      lg: {
+        height: '$7',
+        fontSize: '1.125rem',
+        lineHeight: '$7',
+
+        padding: 0,
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'lg',
   },
 })
 

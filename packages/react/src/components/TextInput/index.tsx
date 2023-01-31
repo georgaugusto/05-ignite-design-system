@@ -9,9 +9,9 @@ import {
 } from './styles'
 
 export interface TextInputProps extends ComponentProps<typeof Input> {
-  label: string
+  label?: string
   prefix?: string
-  variant: 'primary'
+  variant?: 'primary'
   isErrored?: any
   errorMessage?: string
 }
@@ -25,7 +25,11 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
         </Text>
       )}
 
-      <InputContainer variant={variant} isErrored={!!isErrored}>
+      <InputContainer
+        size={props.size}
+        variant={variant}
+        isErrored={!!isErrored}
+      >
         {!!prefix && <Prefix>{prefix}</Prefix>}
         <Input ref={ref} {...props} />
       </InputContainer>

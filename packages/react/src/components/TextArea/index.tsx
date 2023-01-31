@@ -3,8 +3,8 @@ import { Text } from '../Text'
 import { TextAreaContainer, TextAreaInput, ErrorMessage } from './styles'
 
 export interface TextAreaProps extends ComponentProps<typeof TextAreaInput> {
-  label: string
-  variant: 'primary'
+  label?: string
+  variant?: 'primary'
   isErrored?: any
   errorMessage?: string
 }
