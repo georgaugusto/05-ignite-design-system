@@ -1,5 +1,11 @@
 # @course-ignite-ui/tokens
 
+## 1.1.1
+
+### Patch Changes
+
+- 679c450: little adjustments
+
 ## 1.1.0
 
 ### Minor Changes
