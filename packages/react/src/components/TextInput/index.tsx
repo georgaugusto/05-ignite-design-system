@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react'
+import { ComponentProps, ElementRef, forwardRef } from 'react'
 import { Text } from '../Text'
 import {
   TextInputContainer,
@@ -16,15 +16,8 @@ export interface TextInputProps extends ComponentProps<typeof Input> {
   errorMessage?: string
 }
 
-export function TextInput({
-  label,
-  variant,
-  prefix,
-  isErrored,
-  errorMessage,
-  ...props
-}: TextInputProps) {
-  return (
+export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
+  ({ label, variant, prefix, isErrored, errorMessage, ...props }, ref) => (
     <TextInputContainer>
       {label && (
         <Text size="sm" as="label">
@@ -34,14 +27,14 @@ export function TextInput({
 
       <InputContainer variant={variant} isErrored={!!isErrored}>
         {!!prefix && <Prefix>{prefix}</Prefix>}
-        <Input {...props} />
+        <Input ref={ref} {...props} />
       </InputContainer>
 
       <ErrorMessage isErrored={!props.disabled && !!isErrored}>
         {!!isErrored && <span>{errorMessage}</span>}
       </ErrorMessage>
     </TextInputContainer>
-  )
-}
+  ),
+)
 
 TextInput.displayName = 'TextInput'
