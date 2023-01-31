@@ -3,7 +3,10 @@ import { styled } from '../../styles'
 export const TextInputContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
-  gap: '$2',
+
+  label: {
+    paddingBottom: '$2',
+  },
 })
 
 export const InputContainer = styled('div', {
@@ -148,7 +151,7 @@ export const ErrorMessage = styled('div', {
     isErrored: {
       true: {
         opacity: 1,
-        paddingBottom: '$3',
+        paddingTop: '$2',
 
         transition: 'opacity 0.3s cubic-bezier(0.4, 0, 1, 1)',
       },

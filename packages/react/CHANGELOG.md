@@ -1,5 +1,11 @@
 # @course-ignite-ui/react
 
+## 2.0.0
+
+### Major Changes
+
+- Change gap to padding in Text Input
+
 ## 1.1.3
 
 ### Patch Changes
