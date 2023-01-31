@@ -17,6 +17,7 @@ Nesse semana construimos um Design System, entendendemos como documentar os comp
 Para a criação da base do design system desta semana utilizei como base dois projetos, o projeto do curso do ignite e o design base da Uber.
 
 Uber's Base design system - [Base Gallery](https://www.figma.com/community/file/805195278314519508)
+<br />
 Projeto da próxima semana - [Ignite Call](https://www.figma.com/community/file/1161274296921389678)
 
 ## Preview
