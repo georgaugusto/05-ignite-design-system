@@ -1,5 +1,11 @@
 # @course-ignite-ui/react
 
+## 2.0.1
+
+### Patch Changes
+
+- Fix padding top on text input error message
+
 ## 2.0.0
 
 ### Major Changes

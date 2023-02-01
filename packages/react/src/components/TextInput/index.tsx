@@ -35,7 +35,9 @@ export const TextInput = forwardRef<ElementRef<typeof Input>, TextInputProps>(
       </InputContainer>
 
       <ErrorMessage isErrored={!props.disabled && !!isErrored}>
-        {!!isErrored && <span>{errorMessage}</span>}
+        {!!isErrored && errorMessage?.length !== 0 && (
+          <span>{errorMessage}</span>
+        )}
       </ErrorMessage>
     </TextInputContainer>
   ),

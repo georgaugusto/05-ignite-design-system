@@ -151,9 +151,12 @@ export const ErrorMessage = styled('div', {
     isErrored: {
       true: {
         opacity: 1,
-        paddingTop: '$2',
 
         transition: 'opacity 0.3s cubic-bezier(0.4, 0, 1, 1)',
+
+        span: {
+          paddingTop: '$2',
+        },
       },
     },
   },
