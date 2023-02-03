@@ -11,7 +11,7 @@
 </p>
 
 ## Sobre
-Nesse semana construimos um Design System, entendendemos como documentar os componentes do React e descobrimos diversas ferramentas que nos estão ajudando desde a implementação do Design System até sua publicação, como o Storybook, o changesets e muito mais.
+Nessa semana construímos um Design System, entendemos como documentar os componentes do React e descobrimos diversas ferramentas que nos estão ajudando desde a implementação do Design System até sua publicação, como o Storybook, o changesets e muito mais.
 
 ### Template
 Para a criação da base do design system desta semana utilizei como base dois projetos, o projeto do curso do ignite e o design base da Uber.
