@@ -1,5 +1,11 @@
 # @course-ignite-ui/react
 
+## 4.0.0
+
+### Major Changes
+
+- testing changelog
+
 ## 2.0.1
 
 ### Patch Changes
